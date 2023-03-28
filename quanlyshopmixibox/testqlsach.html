@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUẢN LÝ SÁCH</title>
+</head>
+<body>
+    <h3 class="sub-title">DANH SÁCH SÁCH</h3>
+    <table class="table-list" cellspacing="0" cellpadding="0">
+        
+        
+      
+        
+        
+        <?php
+            // include 'ketnoi.php';
+            // $conn = MoKetNoi();
+            // if ($conn->connect_error) {
+            //     echo "Không kết nối được với MySQL !!!";
+            // }
+            // mysqli_select_db($conn, "bai12");
+            $conn=mysqli_connect("localhost", "root", "","bai12");
+            $sql = "SELECT * FROM SACH
+                    JOIN GIOITHIEUSACH ON SACH.TUASACH = GIOITHIEUSACH.TUASACH
+                    JOIN LOAI ON SACH.MATL = LOAI.MATL
+                    JOIN NHAXUATBAN ON SACH.MANXB = NHAXUATBAN.MANXB
+                    JOIN TACGIA ON SACH.MATG = TACGIA.MATG;";
+            $result = mysqli_query($conn, $sql);
+            //in ra danh sách dữ liệu
+            while ($row = mysqli_fetch_assoc($result)) {
+                $MASACH = $row['MASACH'];
+                $TUASACH = $row['TUASACH'];
+                $HINH = $row['HINH'];
+                $GIACU = $row['GIACU'];
+                $GIAMOI = $row['GIAMOI'];
+                $MANXB = $row['MANXB'];
+                $MATL = $row['MATL'];
+                $MATG = $row['MATG'];
+                
+                $MOTA = $row['MOTA'];
+                $TENTL = $row['TENTL'];
+
+                $TENTG = $row['TENTG'];
+                $DICHGIA = $row['DICHGIA'];
+
+                $TENNXB = $row['TENNXB'];
+                
+
+        ?>
+        <tr class="list-items">
+            <th class="items-text">MÃ SÁCH(MASACH)</th>
+            <th class="items-text">TÊN SÁCH(TUASACH)</th>
+            <th class="items-text">HÌNH ẢNH(HINH)</th>
+            <th class="items-text">GIÁ CŨ(GIACU)</th>
+            <th class="items-text">GIÁ MỚI(GIAMOI)</th>
+            <th class="items-text">MÃ NHÀ XUẤT BẢN(MANXB)</th>
+            <th class="items-text">MÃ THỂ LOẠI(MATL)</th>
+            <th class="items-text">MÃ TÁC GIẢ(MATG)</th>
+        </tr>
+        <tr class="list-items">
+            <td class="item-text"><?php echo $MASACH ?></td>
+            <td class="item-text"><?php echo $TUASACH ?></td>
+            <td class="item-text"><?php echo $HINH ?></td>
+            <td class="item-text"><?php echo $GIACU ?></td>
+            <td class="item-text"><?php echo $GIAMOI ?></td>
+            <td class="item-text"><?php echo $MANXB ?></td>
+            <td class="item-text"><?php echo $MATL ?></td>
+            <td class="item-text"><?php echo $MATG ?></td>
+        </tr>
+
+        <tr class="list-items">
+            <th class="items-text">TÊN SÁCH(TUASACH)</th>
+            <th class="items-text">MÔ TẢ VỀ SÁCH(MOTA)</th>
+        </tr>
+        <tr class="list-items">
+            <td class="item-text"><?php echo $TUASACH ?></td>
+            <td class="item-text"><?php echo $MOTA ?></td>
+        </tr>
+
+        <tr class="list-items">
+            <th class="items-text">MÃ THỂ LOẠI(MATL)</th>
+            <th class="items-text">TÊN THỂ LOẠI(TENTL)</th>
+        </tr>
+        <tr class="list-items">
+            <td class="item-text"><?php echo $MATL ?></td>
+            <td class="item-text"><?php echo $TENTL ?></td>
+        </tr>
+        
+        <tr class="list-items">
+            <th class="items-text">NHÀ XUẤT BẢN(MANXB)</th>
+            <th class="items-text">DỊCH GIẢ(DICHGIA)</th>
+            <th class="items-text">TÊN NHÀ XUẤT BẢN(TENNXB)</th>
+        </tr>
+        <tr class="list-items">
+            <td class="item-text"><?php echo $MANXB ?></td>
+            <td class="item-text"><?php echo $DICHGIA ?></td>
+            <td class="item-text"><?php echo $TENNXB ?></td>
+        </tr>
+
+        <tr class="list-items">
+            <th class="items-text">MÃ TÁC GIẢ(MATG)</th>
+            <th class="items-text">TÊN TÁC GIẢ(TENTG)</th>
+        </tr>
+        <tr class="list-items">
+            <td class="item-text"><?php echo $MATG ?></td>
+            <td class="item-text"><?php echo $TENTG ?></td>
+        </tr>
+        <?php
+            }
+            // DongKetNoi($conn);
+        ?>
+        <tr>
+            <td colspan="9" align="center">
+                <button type="button" onclick="myFunction()">THÊM MỚI</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function myFunction(){
+            location.replace("./themmoidulieu.php");//điều hướng tới trang thêm mới dữ liệu
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Thêm dữ liệu cho bảng GIOITHIEUSACH
+        if (isset($_POST['txtMT'])) {
+            // Insert data into GIOITHIEUSACH table
+            $DataGIOITHIEUSACH = "INSERT INTO GIOITHIEUSACH (MOTA)" .
+                                 " VALUES ('" . $_POST['txtMT'] . "')" .
+                                 " ON DUPLICATE KEY UPDATE MOTA=MOTA";
+            $results = mysqli_query($conn, $DataGIOITHIEUSACH) or die (mysqli_error($conn));
+            // $sodong = mysqli_affected_rows($conn);
+            // echo "Số mẫu tin mới được thêm vào trong bảng GIOITHIEUSACH là: " . $sodong;
+        } else {
+            echo "Lỗi dữ liệu";
+            // Handle the case when the txtMT element is not defined
+            // For example, display an error message or redirect to a different page
+        }

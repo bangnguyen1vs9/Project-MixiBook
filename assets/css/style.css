@@ -1,0 +1,1060 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+}
+
+
+/* ===========COMMON======== */
+i {
+    color: #FFF;
+    padding-right: 5px;
+}
+a {
+    text-decoration: none;
+}
+#dn {
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-decoration: underline;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    /* background-color: #5ab2ff; */
+    color: #ffffff;
+    font-size: 1.9rem;
+}
+#linkdanchuyentrang {
+    margin-top: 35px;
+    color: #0088ff;
+    display: block;
+    text-align: center;
+    font-size: 2.1rem;
+    padding: 5px 0;
+    text-decoration: underline;
+}
+#linkdanchuyentrang:hover {
+    font-weight: 700;
+}
+
+
+
+/* ===========HEADER============== */
+.header {
+    background-color:rgb(14, 124, 128);
+    padding: 5px 0;
+}
+.header .header-top-one {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-top-one .header-top-itens {
+    display: flex;
+    align-items: center;
+}
+
+.header-top-one .header-top-itens .sub-title {
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: #FFF;
+    letter-spacing: 5px;
+    line-height: 1.86;
+}
+.header-top-one .grid__row {
+    justify-content: space-between;
+}
+.header-top-one .header-top-link {
+    font-size: 1rem;
+    font-weight: 600;
+    border: 1px solid #FFF;
+    padding: 5px;
+    color: #FFF;
+}
+
+
+.header-top-two {
+    padding-bottom: 2px;
+}
+.header-top-two .header-two-list {
+    display: flex;
+    align-items: center;
+}
+.header-top-two .header-two-fb > i {
+    margin-right: 15px;
+    font-size: 2.2rem;
+}
+.header-top-two .header-two-list .header-item-text {
+    color: #FFF;
+    padding: 3px 0;
+}
+.header .header-two-phone {
+    justify-content: end;
+}
+.header .header-two-phone .header-phone-link {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.header .header-two-phone a {
+    font-size: 1.3rem;
+    text-transform: lowercase;
+    color: #FFF;
+}
+
+
+/* ==========NAVBAR======== */
+.navbar {
+    background-color: #FFF;
+}
+.navbar .grid__row {
+    align-items: center;
+}
+.navbar i, .navbar a {
+    color: #000;
+}
+.navbar .navbar-list {
+    padding-top: 5px;
+}
+
+.vetrangchu {
+    display: block;
+    padding: 15px 25px;
+    /* background-color: #004bc3; */
+    font-size: 1.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #250697;
+}
+
+
+
+
+
+.navbar .navbar-list img {
+    width: 69%;
+    height: 69%;
+}
+.navbar .navbar-list .navbar-seach input {
+    font-size: 1.9rem;
+    height: 45px;
+    padding: 5px 15px;
+    color: #000000;
+    border: solid 1px #CCC;
+    /* border-radius: 30px; */
+    width: calc(100% - 60px);
+    position: relative;
+    outline: none;
+}
+ .navbar-seach button {
+    border: none;
+    background-color: cadetblue;
+    position: absolute;
+    padding: 14.5px;
+}
+.navbar-seach button > i {
+    color: #FFF
+}
+.navbar .navbar-list .account-list {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.navbar .navbar-list .account-list .account-items {
+    margin-left: 20px;
+}
+.navbar .navbar-list .account-list .account-items:nth-child(3) {
+    font-size: 2.9rem;
+    margin: 0 25px;
+}
+.navbar .navbar-list .account-list .navv-link {
+    position: relative;
+}
+.navbar .navbar-list .account-list .navv-link:hover .list-items {
+    display: block;
+}
+.navbar .navbar-list .account-list .navv-link .navbar-link {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.navbar .navbar-list .account-list .navv-link .list-items {
+    position: absolute;
+    display: none;
+    z-index: 10;
+    width: 210px;
+    border-radius: 8px;
+    background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%);
+}
+.navbar .navbar-list .account-list .navv-link .list-items li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #CCC;
+}
+.navbar .navbar-list .account-list .navv-link .list-items li:last-child {
+    border: none;
+}
+.navbar .navbar-list .account-list .navv-link .list-items li:hover {
+    background: #a1c4fd;
+    border-radius: 8px;
+
+}
+.navbar .navbar-list .account-list .navv-link .list-items li a {
+    font-size: 1.7rem;
+    font-weight: 600;
+    
+}
+/* ----logo----GIỎ HÀNG-----LOG OUT---- */
+.log-out, 
+.giohang-cart {
+    font-size: 2.9rem;
+    background: aliceblue;
+    padding: 15px;
+    border-radius: 9999px;
+}
+.giohang-list {
+    position: relative;
+    padding: 8px;
+    /* background-color: #0088ff; */
+}
+.number-sp {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ffa700;
+    padding: 6px 9px;
+    color: #FFF;
+    border-radius: 9999px;
+    z-index: 1;
+    font-weight: 600;
+}
+
+
+/* ----Log OUT---- */
+.log-out {
+    margin: 5px 80px;
+}
+.list-log-out {
+    position: relative;
+
+}
+.list-log-out:hover .log-out-items {
+    display: block;
+}
+.log-out-items {
+    display: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+    z-index: 10;
+    width: 210px;
+}
+.log-out-items p {
+    text-align: center;
+    padding: 20px 0;
+}
+.log-out-items a {
+    display: block;
+    border-top: 1px solid #CCC;
+    text-align: center;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+.dangxuat:hover {
+    background-color: #0088ff;
+    border-radius: 0 0 8px 8px;
+}
+/* --------------banner----------- */
+.banner {
+    background-color: #FFF;
+    position: relative;
+}
+#Slider {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #7f7f7f;
+    overflow: hidden;
+}
+
+.aspect-ration-169{
+    display: block;
+    position: relative;
+    padding-top: 37%;
+    transition: 0.3s;
+}
+.aspect-ration-169 img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+.dot-conteiner {
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #CCC;
+    border-radius: 50%;
+    margin: 0 6px;
+    cursor: pointer;
+}
+.dot.active {
+    background-color: #333;
+}
+
+.banner .banner-list-menu {
+    position: absolute;
+    top: 0;
+    width: 78%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.banner .banner-list-menu a {
+    color: #000;
+    margin: 0 25px;
+    font-size: 1.9rem;
+    font-weight: 500
+}
+.banner .banner-list-menu a:hover {
+    color: rgb(4, 0, 255);
+}
+.banner-list-menu .banner-list-menu-items {
+    position: relative;
+}
+.banner-list-menu .banner-list-menu-items:hover .banner-menu-items {
+    display: block;
+}
+.banner-list-menu .banner-list-menu-items .banner-menu-items {
+    position: absolute;
+    display: none;
+    background-color: #badfff;
+    z-index: 3;
+    width: 230px;
+    border-radius: 5px;
+}
+.banner-list-menu .banner-list-menu-items .banner-menu-items li:hover {
+    background-color: #ffa700;
+}
+.banner-list-menu .banner-list-menu-items .banner-menu-items li a {
+    display: block;
+    padding: 20px 0;
+    
+}
+
+
+/* -------------------banner-two------------------  */
+.banner-two {
+    position: relative;
+    /* padding-top: 290px; */
+    background-image: url("../img/backgr2.png");
+    width: 100%;
+    height: 320px;
+    background-attachment: fixed;
+    /* background-repeat: no-repeat, repeat; */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    
+}
+.banner-tow-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.banner-tow-list-menu {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 0;
+}
+.banner-tow-list-menu .banner-tow-menu-items {
+    position: relative;
+}
+.banner-tow-list-menu .banner-tow-menu-items:hover .banner-two-menu-items {
+    display: block;
+}
+.banner-tow-list-menu .banner-tow-menu-items .banner-two-menu-items {
+    position: absolute;
+    display: none;
+    width: 210px;
+    border-radius: 8px;
+    background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+}
+.banner-tow-list-menu .banner-tow-menu-items .banner-two-menu-items li {
+    padding: 10px 0
+}
+.banner-tow-list-menu .banner-tow-menu-items .banner-two-menu-items li:last-child {
+    border-top: 1px solid #CCC;
+}
+
+.banner-tow-list-menu .banner-tow-menu-items .banner-two-menu-items li a {
+    color: #FFF;
+}
+.banner-tow-list-menu .banner-tow-menu-items .banner-two-menu-items li a:hover {
+    color:#000;
+}
+.banner-tow-list-menu li a {
+    color: #000;
+    margin: 0 25px;
+    font-size: 1.9rem;
+    font-weight: 500;
+}
+.banner-tow-list-menu li a:hover {
+    color: rgb(4, 0, 255);
+}
+.banner-tow-list-texts {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    /* width: 100%; */
+}
+.banner-tow-list-texts .sub-title {
+    font-size: 2.9rem;
+    font-weight: 600;
+    color: #FFF;
+}
+.banner-tow-list-texts .banner-tow-texts-items {
+    margin-top: 5px;
+}
+.banner-tow-list-texts .banner-tow-texts-items a,
+.banner-tow-list-texts .banner-tow-texts-items span {
+    color: #FFF;
+    font: 1.9rem;
+    font-weight: 400;
+}
+/* ----------------------------content-1------------------------- */
+.content-1 {
+    padding-top: 25px;
+    background-color: #FFF;
+}
+.content-1 .content-text-top {
+    margin-bottom: 25px;
+    display: block;
+    text-align: center;
+}
+.content-1 .content-text-top .sub-title a {
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 1.86;
+    color: #333;
+}
+.content-1 .content-text-top .desc {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #333;
+}
+
+
+
+/* =====================SẢN PHẨM=================== */
+.content-two {
+    padding: 15px 0;
+}
+.content-two .content-two-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content-two .content-two-left {
+    border: 2px solid #CCC;
+    height: 50vh;
+    border-radius: 10px;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+.content-two .content-two-left .sub-title {
+    /* margin-top: 3px;? */
+    padding: 10px 15px;
+
+    border-radius: 10px 10px 0 0;
+    font-size: 2.1rem;
+    font-weight: 700;
+    /* color: #FFF; */
+    background-color: #1da1f2;
+}
+.content-two .content-two-left .desc {
+    padding: 15px 25px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-bottom: 1px solid #CCC;
+}
+.content-two .content-two-left .desc:hover {
+    background-color: #ffd500;
+    color: #FFF;
+}
+.content-two .content-two-right .sub-title {
+    font-size: 2.6rem;
+    font-weight: 600;
+}
+.content-two .content-two-right .desc {
+    font-size: 1.9rem;
+    color: #000;
+    font-weight: 500;
+}
+.content-two .content-two-right .desc #SortBy {
+    padding: 5px 0;
+    font: 500;
+    font-size: 1.6rem;
+    margin-left: 10 px;
+}
+.content-two .content-two-right .desc option {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #000;
+}
+.list-sanpham-texts {
+    margin: 25px 0;
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    padding: 10px 0;
+    border-radius: 8px;
+    align-items: center;
+    
+}
+.list-sanpham-texts:hover {
+    box-shadow: 0 0 19px #CCC;
+}
+.list-sanpham-texts .image {
+    width: 100%;
+    height: 211px;
+    padding: 0 15px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: contein;
+}
+.list-sanpham-texts .item-texts {
+    padding: 15px 20px;
+}
+.list-sanpham-texts .item-texts .sub-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.8rem;
+    height: 3.8rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.list-sanpham-texts .item-texts .sub-title:hover {
+    color: #0F5532;
+}
+.list-sanpham-texts .item-texts .gia-sp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.list-sanpham-texts .item-texts .gia-sp .desc:nth-child(1) {
+    color: #0F5532;
+    font-weight: 500;
+}
+.list-sanpham-texts .item-texts .gia-sp .desc:nth-child(2) {
+    text-decoration: line-through;
+    color: #bebebe;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========FOOTER========= */
+.footer {
+    margin-top: 15px;
+    padding: 15px 0;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+.footer .footer-list .sub-title {
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: #333;
+    text-decoration: underline;
+}
+.footer .footer-list .desc {
+    margin-top: 25px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.36;
+}
+
+
+
+
+
+/* =================ĐĂNG KÝ---ĐĂNG NHẬP============= */
+section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+section .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section .trees {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 100;
+    pointer-events: none;
+}
+section .girl {
+    position: absolute;
+    scale: 0.65;
+    pointer-events: none;
+    animation: animateGirl 10s linear infinite;
+}
+@keyframes animateGirl {
+    0% {
+        transform: translateX(calc(100% + 100vw));
+    }
+    50% {
+        transform: translateX(calc(-100% - 100vw));
+    }
+    50.01% {
+        transform: translateX(calc(-100% - 100vw))
+        rotateY(180deg);
+    }
+    100% {
+        transform: translateX(calc(100% + 100vw))
+        rotateY(180deg);
+    }
+} 
+
+/* ----Sign Up---- */
+section .sign-up {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 45px 55px;
+    border-radius: 15px;
+}
+section .sign-up caption {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #90281f;
+    margin-bottom: 20px;
+}
+section .sign-up .dkdn td {
+    padding: 3px 0;
+}
+section .sign-up .dkdn td:nth-child(1) {
+    color: #90281f;
+    font-size: 1.9rem;
+    font-weight: 500;
+    outline: none;
+    
+}
+section .sign-up .btn-width .btn-dk {
+    width: 100%;
+}
+section .sign-up .dkdn td:nth-child(2) input {
+    margin-left: 20px;
+    padding: 10px;
+    font-size: 1.6rem;
+    width: 239px;
+    /* color: #90281f; */
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    /* background-color: #FFF; */
+}
+section .sign-up .dkdn .btn-dk   {
+    margin-top: 25px;
+    font-size: 1.6rem;
+    background-color: #90281f;
+    color: #FFF;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+} 
+section .sign-up .dkdn .btn-dk:hover {
+    background-color: rgb(11, 173, 184);
+}
+section .link-dkdntk {
+    text-align: end;
+    padding: 15px 0;
+}
+section .link-dkdntk a {
+    color:#90281f;
+    font-weight: 600;
+}
+section .link-dkdntk a:hover {
+    text-decoration: underline;
+    color: rgb(11, 173, 184);
+}
+section .sign-up .btn-width {
+    width: 100%;
+}
+
+
+.leaves {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    pointer-events: none;
+}
+.leaves .set {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.leaves .set div {
+    position: absolute;
+    display: block;
+}
+.leaves .set div:nth-child(1) {
+    left: 20%;
+    animation: animate 20s linear infinite;
+}
+.leaves .set div:nth-child(2) {
+    left: 50%;
+    animation: animate 14s linear infinite;
+}.leaves .set div:nth-child(3) {
+    left: 70%;
+    animation: animate 12s linear infinite;
+}.leaves .set div:nth-child(4) {
+    left: 5%;
+    animation: animate 15s linear infinite;
+}.leaves .set div:nth-child(1) {
+    left: 85%;
+    animation: animate 18s linear infinite;
+}.leaves .set div:nth-child(2) {
+    left: 90%;
+    animation: animate 12s linear infinite;
+}.leaves .set div:nth-child(3) {
+    left: 15%;
+    animation: animate 14s linear infinite;
+}.leaves .set div:nth-child(4) {
+    left: 60%;
+    animation: animate 15s linear infinite;
+}
+@keyframes animate {
+    0% {
+        opacity: 0;
+        top: -10%;
+        transform: translateX(20px) rotate(0deg);
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        transform: translateX(20px) rotate(45deg);
+    }
+    40% {
+        transform: translateX(-20px) rotate(90deg);
+    }
+    60% {
+        transform: translateX(20px) rotate(180deg);
+    }
+    80% {
+        transform: translateX(-20px) rotate(55deg);
+    }
+    100% {
+        top: 110%;
+        transform: translateX(20px) rotate(225deg);
+    }
+}
+
+
+
+
+
+
+
+
+/* ================MUA SẢN PHẨM=========== */
+.muasanpham {
+    padding: 55px 0 25px;
+}
+.muasanpham .muasanpham-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+.product-detail__left img {
+    /* border-right: 1px solid #000; */
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.product-detail__right {
+    margin-left: 35px;
+}
+.product-detail__right .sub-title {
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: #333;
+
+}
+.product-detail__right .product-detail__right-list {
+    padding: 5px 0 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #CCC;
+}
+.product-detail__right .product-detail__right-list .desc-tg {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #333;
+}
+.product-detail__right .product-detail__right-list span {
+    padding: 0 10px;
+}
+.product-detail__right .product-detail__right-list-gia {
+    padding: 20px 0;
+    border-bottom: 1px solid #CCC;
+    display: flex;
+    align-items: center;
+}
+.product-detail__right .product-detail__right-list-gia .giamoi {
+    font-size: 3.1rem;
+    font-weight: 600;
+    color: #0F5532;
+    margin-right: 35px;
+}
+.product-detail__right .product-detail__right-list-gia .giacu {
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: #bebebe;
+    text-decoration: line-through;
+    margin-right: 55px;
+}
+.product-detail__right-list-thongtin {
+    padding: 10px 0;
+    border-bottom: 1px solid #CCC;
+}
+.product-detail__right-list-thongtin .noidung {
+    align-items: center;
+    display: flex;
+    padding: 5px;
+    font-size: 1.5rem;
+    font-family: 400;
+    color: #333;
+}
+.product-detail__right-list-thongtin .noidung .item-phone {
+    color: #000;
+    font-size: 1rem;
+}
+
+.product-detail__right-list-thongtin .noidung .lienhe {
+    color: #000;
+    margin-left: 10px;
+}
+.product-detail__right-list-btn {
+    display: flex;
+    align-items: center;
+}
+.product-detail__right-list-btn .buy-item {
+    margin: 15px 25px;
+    padding: 15px 25px;
+    background-color: #0F5532;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 1.6rem;
+    font-weight: 600;
+    
+}
+.product-detail__description-bottom {
+    padding: 25px 25px;
+    border-radius: 8px;
+    background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+}
+.product-detail__description-bottom .sub-title {
+    font-size: 2.1rem;
+    font-weight: 700;
+    text-decoration: underline;
+    color: #000;
+}
+.product-detail__description-bottom .desc {
+    margin-top: 15px;
+    line-height: 1.36;
+    font-weight: 500;
+}
+
+/* CHUYỂN TRANG */
+.chuyentrang {
+    font-size: 2.6rem;
+    padding: 1px 10px;
+}
+.chuyentrang-tow {
+    margin-top: 25px;
+    font-size: 3.6rem;
+}
+
+/* ==================GIỎ HÀNG========== */
+.table-giohang {
+    padding: 20px 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
+}
+.table-giohang caption {
+    /* border: 1px solid #333; */
+    font-size: 2.6rem;
+    font-weight: 600;
+    margin: 15px 0;
+    /* text-decoration: underline; */
+}
+.table-giohang .gh-tieude {
+    background-color: #005bea;
+    padding: 10px 15px;
+}
+.table-giohang .gh-tieude th {
+    padding: 15px 0;
+    border: 1px solid #FFF;
+    font-weight: 600;
+
+}
+.text-items {
+    padding: 15px 45px;
+    background-color: #00c6fb;
+    border: 1px solid #FFF;
+    font-weight: 600;
+}
+.SUM_BUY {
+    padding: 25px 25px;
+    background-color: #ffa700;
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+.btngiohang {
+    margin: 15px 15px 0;
+    padding: 5px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.9rem;
+}
+.btngiohang:hover {
+    background-color: #00dbde;
+    border: none;
+}
+
+.btngiohang-link {
+    background-color: #FFF;
+    margin: 15px 15px 0;
+    padding: 3px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.9rem;
+    color: #000;
+}
+.btngiohang-link:hover {
+    background-color: #00dbde;
+    border: none;
+} 
+
+
+
+
+
+
+
+
+
+
+/* ======================QUẢN LÝ SÁCH=============== */
+.appQLS {
+    background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
+    height: 100vh;
+
+}
+.table-list-QL {
+    display: grid;
+    justify-content: center;
+}
+.table-list-QL caption {
+    background-color: #004bc3;
+    padding: 15px 0;
+    font-size: 2.6rem;
+    font-weight: 600;
+}
+.table-list-QL .list-items th {
+    padding: 15px 35px;
+    border: 3px solid #FFF;
+    background-color: #0079fb;
+}
+.table-list-QL .list-items td {
+    padding: 15px 35px;
+    border: 3px solid #FFF;
+    background-color: #00c6fb;
+}
+/* ====================THEMEM DỮ LIỆU DATABASE */
+.themmoi {
+    border: 1px solid #FFF;
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: #0d00ff;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #ffa700;
+}
+.themmoi:hover {
+    color: #FFF;
+    background-color: aqua;
+}
+.inputthemdulieusach {
+    width: 100%;
+    padding: 5px 15px;
+    margin: 8px 25px;
+}
+.list-items-one td {
+    font-size: 1.9rem;
+    font-weight: 600;
+    background-color: #0088ff;
+    padding: 0 35px
+}

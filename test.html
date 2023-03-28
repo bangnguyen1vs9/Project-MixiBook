@@ -1,0 +1,48 @@
+<?php
+    include 'ketnoi.php';
+    $conn = MoKetNoi();
+    if ($conn->connect_error) {
+        echo "Không kết nối được với MySQL !!!";
+        exit();
+    }
+    mysqli_select_db($conn, "bai12");
+
+    if(isset($_POST['btnSave'])) {
+        //Thêm dữ liệu cho bảng SACH
+        $DataSACH="INSERT INTO SACH (MASACH,TUASACH,HINH,GIACU,GIAMOI)".
+        " VALUES ('".$_POST['txtMS']."','".$_POST['txtTS']."','".$_POST['txtHA']."','".$_POST['txtGC']."','".$_POST['txtGM']."') ON DUPLICATE KEY UPDATE MASACH=MASACH, TUASACH=TUASACH,HINH=HINH,GIACU=GIACU,GIAMOI=GIAMOI";
+        $results = mysqli_query($conn,$DataSACH) or die (mysqli_error($conn));
+        
+        //Thêm dữ liệu cho bảng LOAI
+        $DataLOAI="INSERT INTO LOAI (TENTL)".
+        " VALUES ('".$_POST['txtLS']."') ON DUPLICATE KEY UPDATE TENTL=TENTL";
+        $results = mysqli_query($conn,$DataLOAI) or die (mysqli_error($conn));
+        
+        //Thêm dữ liệu cho bảng NHAXUATBAN
+        $DataNHAXUATBAN="INSERT INTO NHAXUATBAN (DICHGIA)".
+        " VALUES ('".$_POST['txtDG']."') ON DUPLICATE KEY UPDATE DICHGIA=DICHGIA";
+        $results = mysqli_query($conn,$DataNHAXUATBAN) or die (mysqli_error($conn));
+        
+        //Thêm dữ liệu cho bảng GIOITHIEUSACH
+        if (isset($_POST['txtMT'])) {
+            // Insert data into GIOITHIEUSACH table
+            $DataGIOITHIEUSACH = "INSERT INTO GIOITHIEUSACH (MOTA)" .
+                                 " VALUES ('" . $_POST['txtMT'] . "')" .
+                                 " ON DUPLICATE KEY UPDATE MOTA=MOTA";
+            $results = mysqli_query($conn, $DataGIOITHIEUSACH) or die (mysqli_error($conn));
+            // $sodong = mysqli_affected_rows($conn);
+            // echo "Số mẫu tin mới được thêm vào trong bảng GIOITHIEUSACH là: " . $sodong;
+        } else {
+            echo "Lỗi dữ liệu";
+            // Handle the case when the txtMT element is not defined
+            // For example, display an error message or redirect to a different page
+        }
+        
+        
+        // $sodong= mysqli_affected_rows($conn);
+        
+        // echo "Số mẫu tin mới được thêm vào trong bảng LOAIPHIM là: " . $sodong;
+    }
+    
+    DongKetNoi($conn);
+?>
